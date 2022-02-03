@@ -32,6 +32,7 @@ pub trait LevelGenerator {
 /// The probability of generating level `n` is `p` times the probability of
 /// generating level `n-1`, with the probability truncated at the maximum number
 /// of levels allowed.
+#[derive(Clone)]
 pub struct GeometricalLevelGenerator {
     total: usize,
     p: f64,

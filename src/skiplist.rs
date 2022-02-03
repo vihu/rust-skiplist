@@ -20,6 +20,7 @@ pub use crate::skipnode::{IntoIter, Iter, IterMut};
 ///
 /// Unlike a standard linked list, the skiplist can skip ahead when trying to
 /// find a particular index.
+#[derive(Clone)]
 pub struct SkipList<T> {
     // Storage, this is not sorted
     head: Box<SkipNode<T>>,
